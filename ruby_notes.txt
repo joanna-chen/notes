@@ -1,0 +1,49 @@
+Ruby
+----
+
+Declarations
+---
+variableName = value
+---
+
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Division (/)
+Exponentiation (**)
+Modulo (%)
+
+print: normal printing of string
+---
+print "Hello world!" 
+>>>
+Hello world!nil
+---
+
+puts: same as print but newline after the string
+---
+puts "Hello world!"
+>>>
+Hello world!
+
+---
+
+methods: called with a .
+---
+"Joanna".length
+'Joanna'.reverse
+puts 'joanna'.upcase
+puts 'JOANNA'.downcase
+>>>
+6
+annaoJ
+JOANNA
+joanna
+---
+
+single-line comment: #
+
+
+
+
+
