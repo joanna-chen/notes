@@ -45,7 +45,6 @@ string methods
 .capitalize: capitlizes first letter of string and rest lowercase
 .capitalize!: modifies the actual value it is called upon
 
-
 single-line comment: #
 
 multi-line comments: 
@@ -69,5 +68,26 @@ name = "Joanna"
 >>>
 My name is Joanna
 ---
+
+basic control flow
+---
+if true
+  statements
+elsif boolean
+  statements
+else 
+  statements
+end
+---
+---
+unless boolean
+  statements # if boolean is false
+else
+  statements
+end
+---
+
+comparators: ==, !=, <, <=, >, >=
+logical/boolean operators: &&, ||, !
 
 
