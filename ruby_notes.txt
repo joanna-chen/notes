@@ -96,3 +96,64 @@ logical/boolean operators: &&, ||, !
 
 generally, methods ending in ? evaluate to boolean
 
+while loop
+---
+while boolean
+  statements
+end
+---
+
+until loop
+---
+until boolean
+  statements
+end
+---
+
+additional assignment operators: +=, -=, *=, /=
+
+for loop
+---
+for x in 1...10 # does not include 10
+  statements
+end
+---
+---
+for x in 1..10 # includes 10
+  statements
+end
+---
+
+iterator
+---
+loop {
+  statements
+}
+---
+---
+loop do 
+  statements
+  next if boolean # skips a certain instance
+  break if boolean
+end
+---
+
+array
+---
+[value1, value2, ...]
+---
+
+.each method
+---
+arrayOfNum.each do |num|
+  puts num
+end
+---
+
+.times method
+---
+number.times do # repeats 'number' of times
+  statements
+end
+---
+
