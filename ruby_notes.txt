@@ -157,3 +157,4 @@ number.times do # repeats 'number' of times
 end
 ---
 
+.split("delimiter")
