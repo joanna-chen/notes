@@ -44,6 +44,10 @@ joanna
 string methods
 .capitalize: capitlizes first letter of string and rest lowercase
 .capitalize!: modifies the actual value it is called upon
+.gsub!: global substitution
+---
+string.gsub!(/replacethis/, "newstuff")
+---
 
 single-line comment: #
 
@@ -90,4 +94,5 @@ end
 comparators: ==, !=, <, <=, >, >=
 logical/boolean operators: &&, ||, !
 
+generally, methods ending in ? evaluate to boolean
 
