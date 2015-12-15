@@ -28,7 +28,7 @@ Hello world!
 
 ---
 
-methods: called with a .
+methods: called with a . and can also chain them together, just separate by a .
 ---
 "Joanna".length
 'Joanna'.reverse
@@ -41,9 +41,33 @@ JOANNA
 joanna
 ---
 
+string methods
+.capitalize: capitlizes first letter of string and rest lowercase
+.capitalize!: modifies the actual value it is called upon
+
+
 single-line comment: #
 
+multi-line comments: 
+---
+=begin
+this is a comment
+more comment
+=end
+---
 
+gets: input
+chomp: removes the newline at end of input
+---
+variableName = gets.chomp
+---
 
+string interpolation: putting a variable's value into a string
+---
+name = "Joanna"
+"My name is #{name}"
+>>>
+My name is Joanna
+---
 
 
