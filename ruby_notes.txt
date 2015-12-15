@@ -141,6 +141,12 @@ end
 array
 ---
 [value1, value2, ...]
+arrayName[index]
+---
+
+iterating array
+---
+arrayName.each do |value|
 ---
 
 .each method
@@ -158,3 +164,23 @@ end
 ---
 
 .split("delimiter")
+
+hash
+---
+my_hash = Hash.new # creases an empty hash
+my_hash = {} # also empty hash
+hash = {
+  key1 => value1,
+  key2 => value2,
+  key3 => value3
+}
+hash[key1]
+---
+
+iterating hash
+---
+hash.each do |key, value|
+  statements
+end
+---
+
