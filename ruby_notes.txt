@@ -167,7 +167,7 @@ end
 
 hash
 ---
-my_hash = Hash.new # creases an empty hash
+my_hash = Hash.new("default value") # creases an empty hash
 my_hash = {} # also empty hash
 hash = {
   key1 => value1,
