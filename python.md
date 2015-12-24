@@ -1,13 +1,15 @@
-# Stack()
+# Python Data Structures
 
-## Operations
+## Stack()
+
+### Operations
 * push(item) >> places item at the top of the stack
 * pop() >> removes and returns the value at the top of the stack
 * peek() >> returns the value at the top of the stack
 * isEmpty() >> returns boolean, see if stack is empty
 * size() >> returns number of items in stack
 
-## Implementation
+### Implementation
 ```python
 class Stack:
      def __init__(self):
@@ -29,15 +31,15 @@ class Stack:
          return len(self.items)
 ```
 
-# Queue()
+## Queue()
 
-## Operations
+### Operations
 * enqueue(item) >>  adds item to end of queue
 * dequeue() >> returns and removes front item of queue
 * isEmpty() >> returns boolean whether queue is empty
 * size() >> returns number of items in queue
 
-## Implementation
+### Implementation
 ```python
 class Queue:
   def __init__(self):
@@ -56,9 +58,9 @@ class Queue:
     return len(self.items)
 ```
 
-# Deque()
+## Deque()
 
-## Operations
+### Operations
 * addFront(item) >> adds item to front of deque
 * addRear(item) >> add item to rear of deque
 * removeFront() >> returns and removes front item
@@ -66,7 +68,7 @@ class Queue:
 * isEmpty() >> returns boolean whether deque is empty
 * size() >> returns number of items in deque
 
-## Implementation
+### Implementation
 ```python
 class Deque:
   def __init__(self):
@@ -91,9 +93,9 @@ class Deque:
     return len(self.items)
 ```
 
-# Node()
+## Node()
 
-## Implementation
+### Implementation
 ```python
 class Node:
   def __init__(self,initdata):
@@ -113,10 +115,10 @@ class Node:
     self.next = newnext
 ```
 
-# UnorderedList()
+## UnorderedList()
 *uses Node class*
 
-## Implementation
+### Implementation
 ```python
 class UnorderedList:
   def __init__(self):
@@ -167,9 +169,9 @@ class UnorderedList:
         previous.setNext(current.getNext())
 ```
 
-# OrderedList()
+## OrderedList()
 
-## Implementation
+### Implementation
 *only showing the methods that differ from that of UnorderedList*
 
 ```python
