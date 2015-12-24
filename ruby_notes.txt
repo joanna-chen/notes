@@ -184,3 +184,21 @@ hash.each do |key, value|
 end
 ---
 
+.sort_by function --> array of arrays
+---
+hash = hash.sort_by do |first, second|
+  second
+end
+---
+
+methods
+---
+def methodName(parameters)
+  statements
+end
+---
+
+splat arguments: argument preceded by * meaning possible multiple arguments
+---
+method(*argument)
+---
