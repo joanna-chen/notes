@@ -213,3 +213,47 @@ class OrderedList:
         temp.setNext(current)
         previous.setNext(temp)
 ```
+
+## Sequential Search
+* goes through every element to check if it is the value we are searching for
+
+### Analysis of Sequential Search in UnorderedList
+| Case | Best Case | Worst Case | Average Case |
+|------|:----------|:-----------|:-------------|
+| item is present | 1 | n | n/2 |
+| item is not present | n | n | n |
+
+### Analysis of Sequential Search in OrderedList
+| Case | Best Case | Worst Case | Average Case |
+|------|:----------|:-----------|:-------------|
+| item is present | 1 | n | n/2 |
+| item is not present | n | n | n/2 |
+*can stop searching when reach midway*
+
+## Binary Search
+* start at the middle, eliminate half, go to middle of other half, continue...
+* example of *divide and conquer*
+
+### Analysis
+* number of comparisons required: n/(2^i) = 1 --> i = log n
+* therefore, O(log n)
+
+## Hashing
+
+
+## Bubble Sort
+
+
+## Selection Sort
+
+
+## Insertion Sort
+
+
+## Shell Sort
+
+
+## Merge Sort
+
+
+## Quick Sort
