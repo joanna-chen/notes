@@ -322,11 +322,26 @@ class HashTable:
       self.put(key,data)      
 ```
 
-## Bubble Sort
+### Analysis
+* best case O(1), constant time search
 
+## Bubble Sort
+* goes through list multiple times, compares adjacent items and exchanges them
+* item "bubbles" up to location where it belongs
+* simultaneous swap in Python: ```a,b = b,a```
+* **short bubble**: stops swaps if already sorted
+
+### Analysis
+* n-1 passes must be made in a list of length n
+* O(n^2)
 
 ## Selection Sort
+* improves on bubble sort by only making one exchange per each pass
+* finds the largest item and places it in the proper location
 
+### Analysis
+* in worst case, makes the same number of comparisons as bubble sort
+* O(n^2)
 
 ## Insertion Sort
 
@@ -335,6 +350,16 @@ class HashTable:
 
 
 ## Merge Sort
+* recursive algorithm that continually splits list in half
+* when two halves are sorted, they are merged
 
+### Analysis
+* to continuously split list in half is log n (binary search)
+* merging list of size n requires n operations
+* O(n log n)
+* note: merge sort requires extra space to hold the split lists, so if the list is really big this could be an issue
 
 ## Quick Sort
+* selects a value (**pivot value**) in the list
+* **split point**: where the pivot value actually belongs in the list
+* 
