@@ -362,4 +362,12 @@ class HashTable:
 ## Quick Sort
 * selects a value (**pivot value**) in the list
 * **split point**: where the pivot value actually belongs in the list
-* 
+* **partition process**: move all the other items to the correct side of the split point (greater than or less than)
+* increment leftmark until find an item greater than the pivot value and decrement rightmark until find an item less than pivot value --> swap the two items, until leftmark is greater than rightmark
+* place the pivot value where the split point is and call the function again on both partitions now
+* **median of three**: take the first, middle and last value and take the median value to be the pivot value
+
+### Analysis
+* O(n log n) if the split point is at the middle
+* in the worst case, it would become O(n^2) if splitpoint not in the middle
+* but it does not require extra memory
