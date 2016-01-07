@@ -371,3 +371,45 @@ class HashTable:
 * O(n log n) if the split point is at the middle
 * in the worst case, it would become O(n^2) if splitpoint not in the middle
 * but it does not require extra memory
+
+## Tree
+
+### List of lists representation
+
+### Tree Traversals
+* **preorder**: root, left, right
+* **inorder**: left, root, right
+* **postorder**: left, right, root
+
+```python
+def preorder(tree):
+  if tree:
+    print(tree.getRootVal())
+    preorder(tree.getLeftChild())
+    preorder(tree.getRightChild())
+```
+
+```python
+def preorder(tree):
+  print(self.key)  
+  if self.leftChild:
+    self.leftChild.preorder()
+  if self.rightChild:
+    self.rightChild.preorder()
+```
+*for inorder, put the print statement in the middle and for postorder, put the print statment at the end*
+
+## Binary Heaps
+* **priority queue**: a queue that is ordered by priority, so that the greatest priority goes to the front of the queue
+* **min heap**: smallest key is in front
+* **max heap**: largest value is at front
+
+### Operations
+* insert(k): add new item to heap
+* findMin(): return item with the min key value, item stays in the heap
+* delMin(): return item with the min key value, removes item form the heap
+* isEmpty(): returns boolean whether the heap is empty
+* size(): returns number of items int he heap
+* buildHeap(list): builds new heap from list of keys
+
+### Implementation
