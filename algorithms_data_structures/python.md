@@ -397,12 +397,13 @@ def preorder(tree):
   if self.rightChild:
     self.rightChild.preorder()
 ```
-*for inorder, put the print statement in the middle and for postorder, put the print statment at the end*
+*for inorder, put the print statement in the middle and for postorder, put the print statement at the end*
 
 ## Binary Heaps
 * **priority queue**: a queue that is ordered by priority, so that the greatest priority goes to the front of the queue
 * **min heap**: smallest key is in front
 * **max heap**: largest value is at front
+* **heap order property:** in a heap, for every node *x* with parent *p*, the key in *p* <= key in *x*
 
 ### Operations
 * insert(k): add new item to heap
@@ -413,3 +414,41 @@ def preorder(tree):
 * buildHeap(list): builds new heap from list of keys
 
 ### Implementation
+```python
+class BinHeap:
+  def __init__(self):
+    self.heapList = [0]
+    self.currentSize = 0
+
+  # needed to swap items in the list when appending that does not follow the heap property
+  def percUp(self, i):
+    while i // 2 > 0:
+      if self.heapList[i] < self.heapList[i // 2]: # diving by 2 gets the parent location
+        temp = self.heapList[i // 2]
+        self.heapList[i // 2] = self.heapList[i]
+        self.heapList[i] = temp
+      i = i // 2
+
+  def insert(self, k):
+    self.heapList.append(k)
+    self.currentSize += 1
+    self.percUp(self.currentSize)
+
+  def percDown(self, i):
+    while i*2 <= self.currentSize:
+      mc = minChild(i)
+      
+
+  def delMin()
+
+```
+
+## Binary Search Tree
+
+### Operations
+* the operations of a map
+
+### Implementation
+* **bst property:**: the keys less than the parent are in left subtree, keys greater than the parent are in right subtree
+
+### Analysis
