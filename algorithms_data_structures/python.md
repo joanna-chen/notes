@@ -437,9 +437,9 @@ class BinHeap:
   def percDown(self, i):
     while i*2 <= self.currentSize:
       mc = minChild(i)
-      
 
-  def delMin()
+
+  def delMin():
 
 ```
 
@@ -452,3 +452,103 @@ class BinHeap:
 * **bst property:**: the keys less than the parent are in left subtree, keys greater than the parent are in right subtree
 
 ### Analysis
+
+## Graph
+
+### Definitions
+* **vertex:** the node
+* **edge:** connects two nodes together, can be one-way or two-way
+  * **directed graph/digraph:** all edges are one-way
+* **weight:** edges can be weighted to show that there is a cost to go from vertex to vertex
+* **path:** sequence of vertices connected by edges
+* **cycle:** path that starts and ends at the same node
+  * **acyclic graph:** graph with no cycle
+  * **directed acyclic graph (DAG):** directed graph with no cycle
+
+### Graph ADT
+* ```Graph()``` creates new, empty graph
+* ```addVert(vertex)``` adds an instance of ```Vertex``` to graph
+* ```addEdge(fromVert, toVert)``` adds new, directed edge that connects two vertices
+* ```addEdge(fromVert, toVert, weight)``` adds new, weighted, directed edge that connects two vertices
+* ```getVertex(vertKey)``` finds vertex in graph called ```vertKey```
+* ```getVertices()``` returns list of all vertices in graph
+* ```in``` returns ```True``` for statement ```vertex in graph```, if the given vertex is in the graph, ```False``` otherwise
+
+### Adjacency Matrix
+* implement graph using two-dimensional matrix: each row and column represents a vertex in the graph
+* value stored at cell intersection of row *v* and column *w* means there's an edge from vertex *v* to vertex *w*
+* **adjacent:** when two vertices are connected by an edge
+* the value in the cell represents the weight of the edge from vertex *v* to vertex *w*
+
+#### Pros & Cons
+| Pros | Cons |
+| :------------- | :------------- |
+| simple: for small graphs, easy to see which nodes are connected to others | "sparse": most of the cells in the matrix are empty |
+| good implementation when number of edges is large (number of edges required to fill matrix is V^2) | not very efficient |
+
+### Adjacency List
+* more space-efficient way to implement sparsely connected graphs
+* keep master list of all vertices in Graph object and each vertex object maintains list of other vertices it is connected to
+* allows compact representation of sparse graphs
+* allows to easily find all links that are directly connected to particular vertex
+
+### Implementation
+
+#### Vertex Class
+```python
+class Vertex:
+  def __init__(self, key):
+    self.id = key
+    self.connectedTo = {}
+
+  def addNeighbour(self, nbr, weight=0):
+    self.connectedTo[nbr] = weight
+
+  def __str__(self):
+    return str(self.id) + ' connectedTo: ' + str([x.id for x in self.connectedTo])
+
+  def getConnections(self):
+    return self.connectedTo.keys()
+
+  def getId(self):
+    return self.id
+
+  def getWeight(self, nbr):
+    return self.connectedTo[nbr]
+```
+
+#### Graph Class
+```python
+class Graph:
+  def __init__(self):
+    self.vertList = {}
+    self.numVertices = 0
+
+  def addVertex(self, key):
+    self.numVertices = self.numVertices + 1
+    newVertex = Vertex(key)
+    self.verList[key] = newVertex
+    return newVertex
+
+  def getVertex(self, n):
+    if n in self.vertList:
+      return self.vertList[n]
+    else:
+      return None
+
+  def __contains__(self, n):
+    return n in self.vertList
+
+  def addEdge(self, f, t, cost=0):
+    if f not in self.vertList:
+      nv = self.addVertex(f)
+    if t not in self.vertList:
+      nv = self.addVertex(t)
+    self.vertList[f].addNeightbor(self.vertList[t], cost)
+
+  def getVertices(self):
+    return self.vertList.keys()
+
+  def __iter__(self):
+    return iter(self.vertList.values())
+```
