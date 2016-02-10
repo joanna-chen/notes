@@ -149,3 +149,40 @@ function square(x) {
 * however cannot put such a function definition inside a conditional block/loop (use function expression)
 
 ### The Call Stack
+* computer stores the context of flow of control of program in *call stack*
+* every time a function is called, the current context is put on the top of the "stack"
+* when the function returns, it removes the top context from the stack and continues execution
+
+### Optional Arguments
+* if pass a function too many arguments, the extra ones are ignored
+* if pass a function too few, the missing parameters are assigned the value ```undefined```
+* good for taking in "optional" arguments; if there aren't enough arguments passed then if it's ```undefined```, assign the default value
+
+### Closure
+* **closure:** being able to reference a specific instance of local variables in enclosing function
+* a closure is a function that "closes over" some local variables
+```Javascript
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
+}
+
+var twice = multiplier(2);
+console.log(twice(5));
+// → 10
+```
+
+### Recursion
+* function that calls itself
+
+### Growing Functions
+* avoid writing very similar code multiple times
+* find some functionality haven't written yet and deserves its own function
+
+### Functions and Side Effects
+* functions can be divided into those that are called for the *side effects* and the ones that are called for their *return values* (though it's possible to have both)
+* **pure function:** value-producing function that not only has no side effects but also doesn't rely on side effects from other code
+  * always produces the same value with the same arguments
+
+## Data Structures: Objects and Arrays
