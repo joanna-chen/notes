@@ -1,7 +1,7 @@
 import socket
 
 # the variables
-username = "joanna-chen"
+username = str.encode("joanna-chen")
 message = "hello!"
 timestamp = 1014
 
