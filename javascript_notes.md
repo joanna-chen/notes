@@ -186,3 +186,6 @@ console.log(twice(5));
   * always produces the same value with the same arguments
 
 ## Data Structures: Objects and Arrays
+* objects allow for grouping values together and building more complex structures
+
+### Data Sets
