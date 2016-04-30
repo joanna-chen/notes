@@ -1,0 +1,6 @@
+# remaining = number of bytes being received (determined already)
+msg = bytearray()
+while remaining > 0:
+    chunk = s.recv(remaining)    # Get available data
+    msg.extend(chunk)            # Add to message
+    remaining -= len(chunk)

@@ -189,3 +189,39 @@ console.log(twice(5));
 * objects allow for grouping values together and building more complex structures
 
 ### Data Sets
+* **array:** list of values between square brackets, separated by commas
+* look up elements by the *indices*
+
+### Properties
+* there are expressions that access a *property* of some value
+* almost all JS values have properties with the exceptions of ```null``` and ```undefined```
+* access properties: using a dot and using square brackets
+* dot: part after dot must be valid variable name, directly names the property
+* square brackets: expression between brackets is evaluated to get property name
+
+### Methods
+* examples: ```thing.push()```, ```thing.toUpperCase()```
+
+### Objects
+* **object:** arbitrary collection of properties; can add or remove properties as desired
+* to create an object, we can use curly brace notation
+* within the curly braces, a list of properties is given separated by commas
+```Javascript
+var day1 = {
+  squirrel: false,
+  events: ["work", "touched tree", "pizza", "running",
+           "television"]
+};
+console.log(day1.squirrel);
+// → false
+console.log(day1.wolf);
+// → undefined
+day1.wolf = false;
+console.log(day1.wolf);
+// → false
+```
+* **binary ```in``` operator:** returns Boolean value that indicates whether object has particular property
+
+### Mutability
+* **immutable:** impossible to change value (types: numbers, strings, Booleans)
+* Javascript's ```==``` operator only returns ```true``` if two objects are precisely the same value (meaning that they are the same object and have identical contents)
