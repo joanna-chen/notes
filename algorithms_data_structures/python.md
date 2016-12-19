@@ -59,6 +59,7 @@ class Queue:
 ```
 
 ## Deque()
+* double-ended queue
 
 ### Operations
 * addFront(item) >> adds item to front of deque
