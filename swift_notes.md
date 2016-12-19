@@ -1,5 +1,4 @@
-# Swift
-
+# Swift 
 ## Overview 
 ```Swift
 print("Hello world!") 
@@ -90,5 +89,12 @@ sumOf(2, 54, 332)
 * functions can be nested
 * functions are first-class type, function can return another function as value and can also take function in as argument 
 * parameters can have an argument label or **_** for no argument label
-* 
+
+## Delegation
+* **design pattern**: method or way of organizing a program/application’s code in a way that is commonplace, repeatable and practically sound (over time) 
+* **delegation**: situation where class (delegator) delegates behavioural logic to another class (delegate) 
+	* separation of responsibilities and concerns
+	* often used as a way for one class to communicate with another 
+	* one class delegates the opportunity for an action to be carried out to another class due to a lifecycle event that *will* or *did* happen 
+	* `NSNotificationCenter` is for broadcasting to multiple listening instances whereas delegation is for one 
 
